@@ -1,6 +1,10 @@
 .home-b {
   // background-image: url(/images/h-banner.jpg);
-  background: linear-gradient(151deg, var(--body-clr) 60%, var(--primary-clr) 60%);
+  background: linear-gradient(
+    151deg,
+    var(--body-clr) 60%,
+    var(--primary-clr) 60%
+  );
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,9 +17,11 @@
   h1 {
     font-size: 90px;
     font-family: "Aclonica", sans-serif;
+    color: var(--primary-clr);
   }
 
   p {
+    color: var(--primary-clr);
     font-size: 20px;
     margin-top: 30px;
   }
@@ -31,7 +37,7 @@
 
       li {
         margin: 0 10px;
-        transition: all ease-in-out 0.3s;
+        transition: $single-transition;
 
         a {
           transition: all ease-in-out 0.3s;
@@ -54,13 +60,14 @@
 
 .about-wrap {
   background: var(--primary-clr);
-  padding: 100px 0;
+  padding: 150px 0 100px;
   .about-sec {
     @include d-Flex;
     .left-panel {
-      width: 30%;
+      width: 40%;
       .heading {
         @include heading;
+        color: var(--body-clr);
       }
       p {
         font-size: 18px;
@@ -73,7 +80,7 @@
     .right-panel {
       position: relative;
       height: 270px;
-      width: 60%;
+      width: 55%;
       background: var(--sec-blk-clr);
       border: 1px solid var(--sec-wht-clr);
       padding: 20px;
@@ -94,7 +101,7 @@
       }
     }
     .img-d {
-      width: 32%;
+      width: 34%;
       position: absolute;
       right: 20px;
       bottom: -4px;
@@ -103,6 +110,123 @@
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
         width: 100%;
+      }
+    }
+  }
+}
+.ex-wrap {
+  background: var(--body-clr);
+  .experince {
+    padding: 100px 0;
+    .heading {
+      @include heading;
+      color: var(--primary-clr);
+    }
+    ul {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        margin: 0 0 20px 0;
+        border: 1px solid var(--sec-wht-clr);
+        border-radius: 10px;
+        padding: 30px;
+        width: 78%;
+        background: var(--lgt-wht-clr);
+        transition: $single-transition;
+        cursor: pointer;
+        &:hover {
+          background: var(--body-clr);
+          box-shadow: $neutral-sdw;
+        }
+        span {
+          font-size: 16px;
+          color: var(--secondary-txt-clr);
+        }
+        h4 {
+          font-size: 24px;
+          color: var(--primary-clr);
+          margin: 10px 0 20px;
+        }
+        p {
+          font-size: 18px;
+          color: var(--secondary-txt-clr);
+        }
+      }
+    }
+  }
+}
+.portfolio-wrap {
+  background: var(--primary-clr);
+  padding: 80px 0 100px;
+  .portfolio {
+    .heading {
+      @include heading;
+      color: var(--body-clr);
+    }
+    ul {
+      li {
+        @include d-Flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        .left-panel {
+          width: 40%;
+          p {
+            font-size: 16px;
+            color: var(--secondary-txt-clr);
+          }
+        }
+        .right-panel {
+          width: 55%;
+          border: 1px solid var(--sec-blk-clr);
+          border-radius: 10px;
+          a {
+            @include flex;
+            padding: 30px;
+            transition: $single-transition;
+            cursor: pointer;
+            &:hover {
+              border-radius: 10px;
+              box-shadow: $neutral-sdw;
+              background: var(--sec-blk-clr);
+            }
+            .p-img {
+              width: 40%;
+              // img {
+              // width: 100%;
+              // }
+            }
+            .p-details {
+              width: 60%;
+              h4 {
+                font-size: 24px;
+                font-family: "Aclonica", sans-serif;
+                color: var(--body-clr);
+              }
+              p {
+                font-size: 16px;
+                color: var(--secondary-txt-clr);
+                margin: 10px 0 20px;
+              }
+              ul {
+                @include d-center;
+                li {
+                  padding: 8px 24px;
+                  border-radius: 30px;
+                  margin: 0 5px;
+                  transition: $single-transition;
+                  color: var(--secondary-txt-clr);
+                  border: var(--secondary-txt-clr) 1px solid;
+                  &:hover {
+                    color: var(--primary-clr);
+                    background: var(--body-clr);
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
