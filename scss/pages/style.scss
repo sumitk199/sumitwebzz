@@ -1,0 +1,108 @@
+.home-b {
+  background-image: url(/images/h-banner.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include d-center;
+
+  .main-txt {
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-size: 90px;
+    font-family: "Aclonica", sans-serif;
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .sm-icons {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+
+      li {
+        margin: 0 10px;
+        transition: all ease-in-out 0.3s;
+
+        a {
+          transition: all ease-in-out 0.3s;
+          background: var(--secondary-txt-clr);
+          color: var(--primary-clr);
+          font-size: 20px;
+          border-radius: 30px;
+          padding: 8px 10px;
+        }
+        &:hover {
+          transform: translateY(-10px);
+          a {
+            background: var(--body-clr);
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-wrap {
+  background: var(--primary-clr);
+  padding: 100px 0;
+  .about-sec {
+    @include d-Flex;
+    .left-panel {
+      width: 30%;
+      .heading {
+        @include heading;
+      }
+      p {
+        font-size: 18px;
+        color: var(--secondary-txt-clr);
+        font-weight: 400;
+        text-align: justify;
+        margin-top: 10px;
+      }
+    }
+    .right-panel {
+      position: relative;
+      height: 270px;
+      width: 60%;
+      background: var(--sec-blk-clr);
+      border: 1px solid var(--sec-wht-clr);
+      padding: 20px;
+      border-radius: 10px;
+      @include flex;
+      align-items: end;
+      .name-d {
+        width: 60%;
+        h3 {
+          font-family: "Aclonica", sans-serif;
+          color: var(--body-clr);
+          font-size: 44px;
+        }
+        span {
+          color: var(--secondary-txt-clr);
+          font-size: 22px;
+        }
+      }
+    }
+    .img-d {
+      width: 32%;
+      position: absolute;
+      right: 20px;
+      bottom: -4px;
+      img {
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        width: 100%;
+      }
+    }
+  }
+}

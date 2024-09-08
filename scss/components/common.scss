@@ -1,0 +1,28 @@
+body {
+  background: var(--body-clr);
+  font-family: "Roboto", sans-serif;
+  #preloader {
+    background: #000
+      url(https://hackernoon.com/images/0*QdX-f4eHiimvQZoZ.gif) no-repeat
+      center center;
+    position: fixed;
+    z-index: 99999999999;
+    width: 100%;
+    height: 100vh;
+  }
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+.container{
+  margin: auto;
+  width: 1280px;
+}

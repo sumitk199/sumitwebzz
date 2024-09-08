@@ -1,0 +1,44 @@
+// Shadow
+
+$neutral-sdw: 0px 4px 10px 0px rgb(0 0 0 / 30%);
+
+//Flex
+@mixin d-Flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+}
+@mixin d-center {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+@mixin bottom-flex {
+  display: flex;
+  align-items: end;
+}
+@mixin heading {
+  font-size: 36px;
+  font-family: "Aclonica", sans-serif;
+  color: var(--body-clr);
+}
+// Padding
+$p-t-b20: 20px 0;
+$p-btn-primary: 12px 30px;
+
+// font size
+$font12: 12px;
+
+//letter spacing
+$l-s-20: 4px;
+
+//border radius
+$b-r-30: 30px;
+
+//transition
+
+$single-transition: all 0.4s ease-in-out;

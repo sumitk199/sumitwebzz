@@ -1,0 +1,44 @@
+header{
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+.header{
+    @include d-Flex;
+    .logo{
+        height: 50px;
+        img{
+            height: 100%
+        }
+    }
+    nav{
+        ul{
+            @include d-Flex;
+            li{
+                margin: 0 25px;
+                a{
+                    font-weight: bold;
+                    font-size: 14px;
+                    color: var(--primary-clr);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+                &:last-child{
+                    background: var(--primary-clr);
+                    border-radius: 30px;
+                    margin: 0 0 0 130px;
+                    a{
+                        color: var(--body-clr);
+                        padding: 12px 30px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+}
